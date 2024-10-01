@@ -1,13 +1,15 @@
+import java.time.LocalTime;
+
 public class HorarioTurma {
     private Turma turma;
     private String diaSemana;
-    private int horaInicio;  // Horário em minutos (ex: 14:00 -> 840)
-    private int horaFim;
+    private LocalTime horaInicio;  // Mudado para LocalTime
+    private LocalTime horaFim;      // Mudado para LocalTime
     private int ano;
     private int semestre;
 
     // Construtor
-    public HorarioTurma(Turma turma, String diaSemana, int horaInicio, int horaFim, int ano, int semestre) {
+    public HorarioTurma(Turma turma, String diaSemana, LocalTime horaInicio, LocalTime horaFim, int ano, int semestre) {
         this.turma = turma;
         this.diaSemana = diaSemana;
         this.horaInicio = horaInicio;
@@ -21,11 +23,11 @@ public class HorarioTurma {
         return turma;
     }
 
-    public int getHoraInicio() {
+    public LocalTime getHoraInicio() {
         return horaInicio;
     }
 
-    public int getHoraFim() {
+    public LocalTime getHoraFim() {
         return horaFim;
     }
 }

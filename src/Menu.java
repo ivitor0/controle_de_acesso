@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.time.LocalTime;
 
 public class Menu {
     private List<Estudante> estudantes = new ArrayList<>();
@@ -171,10 +172,10 @@ public class Menu {
 
         System.out.print("Dia da Semana: ");
         String diaSemana = scanner.nextLine();
-        System.out.print("Hora de Início (em minutos): ");
-        int horaInicio = scanner.nextInt();
-        System.out.print("Hora de Fim (em minutos): ");
-        int horaFim = scanner.nextInt();
+        System.out.print("Hora de Início (HH:mm): ");
+        LocalTime horaInicio = LocalTime.parse(scanner.nextLine());
+        System.out.print("Hora de Fim (HH:mm): ");
+        LocalTime horaFim = LocalTime.parse(scanner.nextLine());
         System.out.print("Ano: ");
         int ano = scanner.nextInt();
         System.out.print("Semestre: ");
