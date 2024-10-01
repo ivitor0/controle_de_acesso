@@ -14,12 +14,35 @@ public class Turma {
         this.professorFaltou = professorFaltou;
     }
 
-    // Getters
     public List<Estudante> getEstudantes() {
         return estudantes;
     }
 
+    public void setEstudantes(List<Estudante> estudantes) {
+        this.estudantes = estudantes;
+    }
+
+    public int getAnoTurma() {
+        return anoTurma;
+    }
+
+    public void setAnoTurma(int anoTurma) {
+        this.anoTurma = anoTurma;
+    }
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
+
     public boolean isProfessorFaltou() {
         return professorFaltou;
+    }
+
+    public void setProfessorFaltou(boolean professorFaltou) {
+        this.professorFaltou = professorFaltou;
     }
 }
