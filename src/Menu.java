@@ -68,7 +68,7 @@ public class Menu {
         String emailResponsavel = scanner.nextLine();
         System.out.print("Liberação dos Pais (true/false): ");
         boolean liberacaoPais = scanner.nextBoolean();
-        scanner.nextLine(); // Consumir a nova linha
+        scanner.nextLine();
 
         Estudante estudante = new Estudante(matricula, nome, cpf, email, emailResponsavel, liberacaoPais);
         estudantes.add(estudante);
@@ -82,7 +82,7 @@ public class Menu {
         String nome = scanner.nextLine();
         System.out.print("Ativo (true/false): ");
         boolean ativo = scanner.nextBoolean();
-        scanner.nextLine(); // Consumir a nova linha
+        scanner.nextLine();
 
         Curso curso = new Curso(codigo, nome, ativo);
         cursos.add(curso);
@@ -92,7 +92,7 @@ public class Menu {
     private void adicionarTurma(Scanner scanner) {
         System.out.print("Ano da Turma: ");
         int anoTurma = scanner.nextInt();
-        scanner.nextLine(); // Consumir a nova linha
+        scanner.nextLine();
 
         System.out.print("Informe o código do curso: ");
         String codigoCurso = scanner.nextLine();
@@ -132,7 +132,7 @@ public class Menu {
 
         System.out.print("Informe o ano da turma: ");
         int anoTurma = scanner.nextInt();
-        scanner.nextLine(); // Consumir a nova linha
+        scanner.nextLine();
         Turma turma = null;
 
         for (Turma t : turmas) {
@@ -154,7 +154,7 @@ public class Menu {
     private void registrarHorarioDaTurma(Scanner scanner) {
         System.out.print("Informe o ano da turma: ");
         int anoTurma = scanner.nextInt();
-        scanner.nextLine(); // Consumir a nova linha
+        scanner.nextLine();
 
         Turma turma = null;
         for (Turma t : turmas) {
@@ -179,7 +179,7 @@ public class Menu {
         int ano = scanner.nextInt();
         System.out.print("Semestre: ");
         int semestre = scanner.nextInt();
-        scanner.nextLine(); // Consumir a nova linha
+        scanner.nextLine();
 
         HorarioTurma horario = new HorarioTurma(turma, diaSemana, horaInicio, horaFim, ano, semestre);
         horariosTurma.add(horario);
@@ -219,10 +219,7 @@ public class Menu {
             return;
         }
 
-        // Aqui você pode adicionar a lógica para registrar a liberação
-        // Por exemplo, pode-se armazenar em uma lista ou diretamente no objeto Estudante
-        // Exemplo simplificado:
-        estudante.setLiberacaoPais(true); // Defina como necessário
+        estudante.setLiberacaoPais(true);
 
         System.out.println("Liberação cadastrada com sucesso para o estudante " + estudante.getNome());
     }
